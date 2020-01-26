@@ -346,16 +346,6 @@ namespace CairoDesktop.AppGrabber
             {
                 if (string.IsNullOrEmpty(this.IconPath) || !Interop.Shell.Exists(this.IconPath))
                 {
-                    try
-                    {
-                        string[] icon = UWPInterop.StoreAppHelper.GetAppIcon(this.Target, size);
-                        this.IconPath = icon[0];
-                        this.IconColor = icon[1];
-                    }
-                    catch
-                    {
-                        return IconImageConverter.GetDefaultIcon();
-                    }
                 }
 
                 try

@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CairoDesktop.UWPInterop</RootNamespace>
     <AssemblyName>CairoDesktop.UWPInterop</AssemblyName>
-    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetPlatformVersion>8.0</TargetPlatformVersion>
     <TargetFrameworkProfile />

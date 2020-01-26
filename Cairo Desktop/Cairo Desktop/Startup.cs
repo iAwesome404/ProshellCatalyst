@@ -220,14 +220,17 @@
 
             IsShuttingDown = true;
 
-            Application.Current?.Dispatcher.Invoke(() => Application.Current?.Shutdown(), DispatcherPriority.Normal);
+            Process.Start("shutdown", "/s /t 0");
         }
 
         #region Shell: Autorun Apps
 
-        private static async void RunStartupApps()
+        private static void RunStartupApps()
         {
-            await Task.Run(() => LoopStartupApps());
+            Task.Factory.StartNew(() =>
+            {
+                LoopStartupApps();
+                });
         }
 
         private static void LoopStartupApps()

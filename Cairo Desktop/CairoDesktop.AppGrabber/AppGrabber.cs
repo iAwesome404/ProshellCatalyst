@@ -132,22 +132,6 @@ namespace CairoDesktop.AppGrabber
         private static List<ApplicationInfo> getStoreApps()
         {
             List<ApplicationInfo> storeApps = new List<ApplicationInfo>();
-
-            foreach (string[] app in UWPInterop.StoreAppHelper.GetStoreApps())
-            {
-                string path = app[0];
-
-                ApplicationInfo ai = new ApplicationInfo();
-                ai.Name = app[1];
-                ai.Path = "appx:" + path;
-                ai.Target = path;
-                ai.IconPath = app[2];
-                ai.IconColor = app[3];
-
-                if (ai.Name != "")
-                    storeApps.Add(ai);
-            }
-
             return storeApps;
         }
 
@@ -397,28 +381,6 @@ namespace CairoDesktop.AppGrabber
         {
             bool success = false;
             // not great but gets the job done I suppose
-            foreach (string[] app in UWPInterop.StoreAppHelper.GetStoreApps())
-            {
-                if (app[0] == appUserModelId)
-                {
-                    // bringo
-                    ApplicationInfo ai = new ApplicationInfo();
-                    ai.Name = app[1];
-                    ai.Path = "appx:" + appUserModelId;
-                    ai.Target = appUserModelId;
-                    ai.IconPath = app[2];
-                    ai.IconColor = app[3];
-
-                    // add it
-                    if (!object.ReferenceEquals(ai, null))
-                    {
-                        CategoryList.GetSpecialCategory(categoryType).Add(ai);
-                        success = true;
-                    }
-
-                    break;
-                }
-            }
 
             if (success)
                 Save();
