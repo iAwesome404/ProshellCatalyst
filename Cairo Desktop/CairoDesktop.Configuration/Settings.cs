@@ -47,6 +47,7 @@ namespace CairoDesktop.Configuration
         private static string _Language;
         private static bool? _EnableSubDirs;
         private static bool? _FoldersOpenDesktopOverlay;
+        private static bool? _UseWindowsShell;
 
         // Desktop
         private static bool? _EnableDesktop;
@@ -203,6 +204,22 @@ namespace CairoDesktop.Configuration
             }
         }
 
+        public static bool UseWindowsShell
+        {
+            get
+            {
+                if (_UseWindowsShell == null)
+                    _UseWindowsShell = Properties.Settings.Default.UseWindowsShell;
+
+                return (bool)_EnableDesktop;
+            }
+            set
+            {
+                _UseWindowsShell = value;
+                Properties.Settings.Default.UseWindowsShell = (bool)_EnableDesktop;
+                Save();
+            }
+        }
         public static bool EnableDynamicDesktop
         {
             get

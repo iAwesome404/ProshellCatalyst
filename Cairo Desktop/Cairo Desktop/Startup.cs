@@ -72,6 +72,7 @@
 
             #endregion
 
+            FrontPage.Init.StartDashboard();
             // check if we are the current user's shell
             // set here as well so that we don't behave differently once user changes setting
             IsCairoUserShell = Shell.IsCairoUserShell;       // Move to CairoDesktop.Plugins.CairoShellCoreServices.... Make this more robust, to account for system-shell or per-user-shell;
@@ -138,7 +139,7 @@
             {
                 NotificationArea.Instance.Initialize();
             }
-            FrontPage.Init.StartDashboard();
+            
 #if ENABLEFIRSTRUN
             FirstRun();
 #endif

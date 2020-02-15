@@ -36,13 +36,13 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.darkLabel1 = new NeoGeniX.Controls.DarkLabel();
-            this.darkButton1 = new NeoGeniX.Controls.DarkButton();
-            this.darkButton2 = new NeoGeniX.Controls.DarkButton();
-            this.darkButton3 = new NeoGeniX.Controls.DarkButton();
-            this.darkButton4 = new NeoGeniX.Controls.DarkButton();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.darkButton4 = new NeoGeniX.Controls.DarkButton();
+            this.darkButton3 = new NeoGeniX.Controls.DarkButton();
+            this.darkButton2 = new NeoGeniX.Controls.DarkButton();
+            this.darkButton1 = new NeoGeniX.Controls.DarkButton();
+            this.darkLabel1 = new NeoGeniX.Controls.DarkLabel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -95,7 +95,7 @@
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(63)))), ((int)(((byte)(65)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.Aqua;
-            this.button1.Location = new System.Drawing.Point(6, 867);
+            this.button1.Location = new System.Drawing.Point(6, 848);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(194, 23);
             this.button1.TabIndex = 1;
@@ -109,7 +109,7 @@
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(63)))), ((int)(((byte)(65)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button2.Location = new System.Drawing.Point(6, 896);
+            this.button2.Location = new System.Drawing.Point(6, 877);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(194, 23);
             this.button2.TabIndex = 2;
@@ -131,68 +131,8 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(1717, 120);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(203, 960);
+            this.panel2.Size = new System.Drawing.Size(203, 941);
             this.panel2.TabIndex = 1;
-            // 
-            // panel3
-            // 
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 120);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1717, 295);
-            this.panel3.TabIndex = 2;
-            // 
-            // darkLabel1
-            // 
-            this.darkLabel1.AutoSize = true;
-            this.darkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.darkLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.darkLabel1.Location = new System.Drawing.Point(6, 3);
-            this.darkLabel1.Name = "darkLabel1";
-            this.darkLabel1.Size = new System.Drawing.Size(111, 33);
-            this.darkLabel1.TabIndex = 0;
-            this.darkLabel1.Text = "Actions";
-            // 
-            // darkButton1
-            // 
-            this.darkButton1.Location = new System.Drawing.Point(3, 64);
-            this.darkButton1.Name = "darkButton1";
-            this.darkButton1.Padding = new System.Windows.Forms.Padding(5);
-            this.darkButton1.Size = new System.Drawing.Size(197, 23);
-            this.darkButton1.TabIndex = 1;
-            this.darkButton1.Text = "theCalculator";
-            this.darkButton1.Click += new System.EventHandler(this.darkButton1_Click);
-            // 
-            // darkButton2
-            // 
-            this.darkButton2.Location = new System.Drawing.Point(3, 93);
-            this.darkButton2.Name = "darkButton2";
-            this.darkButton2.Padding = new System.Windows.Forms.Padding(5);
-            this.darkButton2.Size = new System.Drawing.Size(197, 23);
-            this.darkButton2.TabIndex = 2;
-            this.darkButton2.Text = "theEditor";
-            this.darkButton2.Click += new System.EventHandler(this.darkButton2_Click);
-            // 
-            // darkButton3
-            // 
-            this.darkButton3.Location = new System.Drawing.Point(3, 122);
-            this.darkButton3.Name = "darkButton3";
-            this.darkButton3.Padding = new System.Windows.Forms.Padding(5);
-            this.darkButton3.Size = new System.Drawing.Size(197, 23);
-            this.darkButton3.TabIndex = 3;
-            this.darkButton3.Text = "theTime";
-            this.darkButton3.Click += new System.EventHandler(this.darkButton3_Click);
-            // 
-            // darkButton4
-            // 
-            this.darkButton4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.darkButton4.Location = new System.Drawing.Point(6, 925);
-            this.darkButton4.Name = "darkButton4";
-            this.darkButton4.Padding = new System.Windows.Forms.Padding(5);
-            this.darkButton4.Size = new System.Drawing.Size(194, 23);
-            this.darkButton4.TabIndex = 4;
-            this.darkButton4.Text = "FrontPage Settings";
-            this.darkButton4.Click += new System.EventHandler(this.darkButton4_Click);
             // 
             // linkLabel1
             // 
@@ -208,6 +148,66 @@
             this.linkLabel1.VisitedLinkColor = System.Drawing.Color.Lime;
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
+            // darkButton4
+            // 
+            this.darkButton4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.darkButton4.Location = new System.Drawing.Point(6, 906);
+            this.darkButton4.Name = "darkButton4";
+            this.darkButton4.Padding = new System.Windows.Forms.Padding(5);
+            this.darkButton4.Size = new System.Drawing.Size(194, 23);
+            this.darkButton4.TabIndex = 4;
+            this.darkButton4.Text = "FrontPage Settings";
+            this.darkButton4.Click += new System.EventHandler(this.darkButton4_Click);
+            // 
+            // darkButton3
+            // 
+            this.darkButton3.Location = new System.Drawing.Point(3, 122);
+            this.darkButton3.Name = "darkButton3";
+            this.darkButton3.Padding = new System.Windows.Forms.Padding(5);
+            this.darkButton3.Size = new System.Drawing.Size(197, 23);
+            this.darkButton3.TabIndex = 3;
+            this.darkButton3.Text = "theTime";
+            this.darkButton3.Click += new System.EventHandler(this.darkButton3_Click);
+            // 
+            // darkButton2
+            // 
+            this.darkButton2.Location = new System.Drawing.Point(3, 93);
+            this.darkButton2.Name = "darkButton2";
+            this.darkButton2.Padding = new System.Windows.Forms.Padding(5);
+            this.darkButton2.Size = new System.Drawing.Size(197, 23);
+            this.darkButton2.TabIndex = 2;
+            this.darkButton2.Text = "theEditor";
+            this.darkButton2.Click += new System.EventHandler(this.darkButton2_Click);
+            // 
+            // darkButton1
+            // 
+            this.darkButton1.Location = new System.Drawing.Point(3, 64);
+            this.darkButton1.Name = "darkButton1";
+            this.darkButton1.Padding = new System.Windows.Forms.Padding(5);
+            this.darkButton1.Size = new System.Drawing.Size(197, 23);
+            this.darkButton1.TabIndex = 1;
+            this.darkButton1.Text = "theCalculator";
+            this.darkButton1.Click += new System.EventHandler(this.darkButton1_Click);
+            // 
+            // darkLabel1
+            // 
+            this.darkLabel1.AutoSize = true;
+            this.darkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.darkLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.darkLabel1.Location = new System.Drawing.Point(6, 3);
+            this.darkLabel1.Name = "darkLabel1";
+            this.darkLabel1.Size = new System.Drawing.Size(111, 33);
+            this.darkLabel1.TabIndex = 0;
+            this.darkLabel1.Text = "Actions";
+            // 
+            // panel3
+            // 
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 120);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1717, 295);
+            this.panel3.TabIndex = 2;
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -215,14 +215,17 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(63)))), ((int)(((byte)(65)))));
             this.BackgroundImage = global::FrontPage.Properties.Resources.bg1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.ClientSize = new System.Drawing.Size(1920, 1061);
+            this.ControlBox = false;
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Dashboard";
-            this.Text = "Dashboard";
+            this.Text = "FrontPage";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Dashboard_Load);
             this.panel1.ResumeLayout(false);

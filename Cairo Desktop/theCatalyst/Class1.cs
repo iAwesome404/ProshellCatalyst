@@ -9,6 +9,11 @@ namespace theCatalyst
 {
     public class Init
     {
+        public static void ShowRunDialog()
+        {
+            Run r = new Run();
+            r.Show();
+        }
         public static void openEditor()
         {
             theEditor editor = new theEditor();

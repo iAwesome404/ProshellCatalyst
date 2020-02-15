@@ -833,7 +833,13 @@ namespace CairoDesktop
 
         private void OpenRunWindow(object sender, RoutedEventArgs e)
         {
-            Shell.ShowRunDialog();
+            if (CairoDesktop.Configuration.Settings.UseWindowsShell) {
+                Shell.ShowRunDialog();
+            } else
+            {
+                theCatalyst.Init.ShowRunDialog();
+            }
+            
         }
 
         private void OpenCloseCairoBox(object sender, RoutedEventArgs e)

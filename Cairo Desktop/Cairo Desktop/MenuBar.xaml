@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Window xmlns="http://schemas.microsoft.com/netfx/2007/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:l10n="clr-namespace:CairoDesktop.Localization;assembly=CairoDesktop.Localization" xmlns:control="clr-namespace:CairoDesktop" x:Class="CairoDesktop.MenuBar"
-    x:Name="Window"
-    Title=""
-    WindowStyle="None"
-    AllowsTransparency="True"
-    Height="23"
-    Top="0"
-    Style="{StaticResource MenuBarWindowStyle}"
-    Left="0"
-    Topmost="True"
-    ResizeMode="NoResize"
-    ShowInTaskbar="False"
-    Focusable="False"
-    AllowDrop="True"
-    Initialized="OnWindowInitialized"
-    SourceInitialized="Window_SourceInitialized"
-    Closing="OnWindowClosing"
-    LocationChanged="Window_LocationChanged"
-    UseLayoutRounding="True"
-    MaxHeight="23">
+<Window xmlns="http://schemas.microsoft.com/netfx/2007/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:l10n="clr-namespace:CairoDesktop.Localization;assembly=CairoDesktop.Localization"
+        xmlns:control="clr-namespace:CairoDesktop"
+        x:Class="CairoDesktop.MenuBar"
+        x:Name="Window"
+        Title=""
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Height="23"
+        Top="0"
+        Style="{StaticResource MenuBarWindowStyle}"
+        Left="0"
+        Topmost="True"
+        ResizeMode="NoResize"
+        ShowInTaskbar="False"
+        Focusable="False"
+        Initialized="OnWindowInitialized"
+        SourceInitialized="Window_SourceInitialized"
+        Closing="OnWindowClosing"
+        LocationChanged="Window_LocationChanged"
+        UseLayoutRounding="True"
+        MaxHeight="23">
     <Window.DataContext>
         <l10n:DisplayString/>
     </Window.DataContext>
@@ -247,7 +250,7 @@
                               Height="22" Name="imgOpenVolume" />
                     </MenuItem.Header>
                     <MenuItem.ContextMenu>
-                        <ContextMenu Style="{StaticResource CairoContextMenuStyle}">
+                        <ContextMenu>
                             <MenuItem Header="{Binding Path=(l10n:DisplayString.sMenuBar_OpenSoundSettings)}"  Click="miOpenSoundSettings_Click"  Name="miOpenSoundSettings" />
                         </ContextMenu>
                     </MenuItem.ContextMenu>

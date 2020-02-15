@@ -117,6 +117,12 @@
     <Compile Include="PSNLogin.Designer.cs">
       <DependentUpon>PSNLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Run.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Run.Designer.cs">
+      <DependentUpon>Run.cs</DependentUpon>
+    </Compile>
     <Compile Include="theCalc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +158,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PSNLogin.resx">
       <DependentUpon>PSNLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Run.resx">
+      <DependentUpon>Run.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="theCalc.resx">
       <DependentUpon>theCalc.cs</DependentUpon>
@@ -198,6 +207,9 @@
       <Project>{f19472f5-8c44-4c51-a8a0-b9de5f555255}</Project>
       <Name>NeoGeniX</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Proshell.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
