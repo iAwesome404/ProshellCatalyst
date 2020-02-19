@@ -94,6 +94,18 @@
       <DependentUpon>AboutBox1.cs</DependentUpon>
     </Compile>
     <Compile Include="Class1.cs" />
+    <Compile Include="findForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="findForm.Designer.cs">
+      <DependentUpon>findForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="theEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="theEditor.Designer.cs">
+      <DependentUpon>theEditor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -117,6 +129,12 @@
     <Compile Include="PSNLogin.Designer.cs">
       <DependentUpon>PSNLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="replaceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="replaceForm.Designer.cs">
+      <DependentUpon>replaceForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Run.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,11 +147,11 @@
     <Compile Include="theCalc.Designer.cs">
       <DependentUpon>theCalc.cs</DependentUpon>
     </Compile>
-    <Compile Include="theEditor.cs">
+    <Compile Include="theEditorLegacy.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="theEditor.Designer.cs">
-      <DependentUpon>theEditor.cs</DependentUpon>
+    <Compile Include="theEditorLegacy.Designer.cs">
+      <DependentUpon>theEditorLegacy.cs</DependentUpon>
     </Compile>
     <Compile Include="TheTime.cs">
       <SubType>Form</SubType>
@@ -152,6 +170,12 @@
     <EmbeddedResource Include="AboutBox1.resx">
       <DependentUpon>AboutBox1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="findForm.resx">
+      <DependentUpon>findForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="theEditor.resx">
+      <DependentUpon>theEditor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -159,14 +183,17 @@
     <EmbeddedResource Include="PSNLogin.resx">
       <DependentUpon>PSNLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="replaceForm.resx">
+      <DependentUpon>replaceForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Run.resx">
       <DependentUpon>Run.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="theCalc.resx">
       <DependentUpon>theCalc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="theEditor.resx">
-      <DependentUpon>theEditor.cs</DependentUpon>
+    <EmbeddedResource Include="theEditorLegacy.resx">
+      <DependentUpon>theEditorLegacy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TheTime.resx">
       <DependentUpon>TheTime.cs</DependentUpon>
@@ -210,6 +237,25 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Proshell.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\copy.png" />
+    <Content Include="Resources\cut.png" />
+    <Content Include="Resources\delete.png" />
+    <Content Include="Resources\exit.png" />
+    <Content Include="Resources\find.png" />
+    <Content Include="Resources\font.png" />
+    <Content Include="Resources\help.png" />
+    <Content Include="Resources\info.png" />
+    <Content Include="Resources\new.png" />
+    <Content Include="Resources\open.png" />
+    <Content Include="Resources\paste.png" />
+    <Content Include="Resources\print.png" />
+    <Content Include="Resources\redo.png" />
+    <Content Include="Resources\replace.png" />
+    <Content Include="Resources\save.png" />
+    <Content Include="Resources\size.png" />
+    <Content Include="Resources\undo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

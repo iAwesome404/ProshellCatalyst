@@ -1,7 +1,6 @@
-﻿using NeoGeniX.Controls;
-namespace theCatalyst
+﻿namespace Notepad
 {
-    partial class theEditor
+    partial class Form1
     {
         /// <summary>
         /// Требуется переменная конструктора.
@@ -29,7 +28,6 @@ namespace theCatalyst
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(theEditor));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -74,15 +72,13 @@ namespace theCatalyst
             this.findBtn = new System.Windows.Forms.ToolStripButton();
             this.replace = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.statusStrip1 = new NeoGeniX.Controls.DarkStatusStrip();
+            this.lineNumber = new System.Windows.Forms.TextBox();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.linesLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.lengthLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.textBox1 = new NeoGeniX.Controls.DarkTextBox();
-            this.skinningManager1 = new NeoGeniX.Skinning.SkinningManager();
-            this.extrasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.launchLegacyVersionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -90,21 +86,16 @@ namespace theCatalyst
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.Control;
-            this.menuStrip1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.formatToolStripMenuItem,
             this.editToolStripMenuItem,
-            this.aboutToolStripMenuItem,
-            this.extrasToolStripMenuItem});
+            this.aboutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(3, 2, 0, 2);
             this.menuStrip1.Size = new System.Drawing.Size(624, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // fileToolStripMenuItem
             // 
@@ -118,80 +109,79 @@ namespace theCatalyst
             this.printToolStripMenuItem,
             this.toolStripSeparator3,
             this.exitToolStripMenuItem});
-            this.fileToolStripMenuItem.ForeColor = System.Drawing.SystemColors.MenuText;
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // newToolStripMenuItem
             // 
-            this.newToolStripMenuItem.Image = global::theCatalyst.Properties.Resources._new;
+            this.newToolStripMenuItem.Image = global::Notepad.Properties.Resources._new;
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
             this.newToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.newToolStripMenuItem.Text = "&New";
             this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
             // 
             // openToolStripMenuItem
             // 
-            this.openToolStripMenuItem.Image = global::theCatalyst.Properties.Resources.open;
+            this.openToolStripMenuItem.Image = global::Notepad.Properties.Resources.open;
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             this.openToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.openToolStripMenuItem.Text = "&Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(172, 6);
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Enabled = false;
-            this.saveToolStripMenuItem.Image = global::theCatalyst.Properties.Resources.save;
+            this.saveToolStripMenuItem.Image = global::Notepad.Properties.Resources.save;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.saveToolStripMenuItem.Text = "&Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // saveAsToolStripMenuItem
             // 
-            this.saveAsToolStripMenuItem.Image = global::theCatalyst.Properties.Resources.save;
+            this.saveAsToolStripMenuItem.Image = global::Notepad.Properties.Resources.save;
             this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
             this.saveAsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
             | System.Windows.Forms.Keys.S)));
-            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.saveAsToolStripMenuItem.Text = "Save as";
             this.saveAsToolStripMenuItem.Click += new System.EventHandler(this.saveAsToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(172, 6);
             // 
             // printToolStripMenuItem
             // 
             this.printToolStripMenuItem.Enabled = false;
-            this.printToolStripMenuItem.Image = global::theCatalyst.Properties.Resources.print;
+            this.printToolStripMenuItem.Image = global::Notepad.Properties.Resources.print;
             this.printToolStripMenuItem.Name = "printToolStripMenuItem";
             this.printToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.printToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.printToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.printToolStripMenuItem.Text = "&Print";
             this.printToolStripMenuItem.Click += new System.EventHandler(this.printToolStripMenuItem_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(172, 6);
             // 
             // exitToolStripMenuItem
             // 
-            this.exitToolStripMenuItem.Image = global::theCatalyst.Properties.Resources.exit;
+            this.exitToolStripMenuItem.Image = global::Notepad.Properties.Resources.exit;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.exitToolStripMenuItem.Text = "&Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -200,7 +190,6 @@ namespace theCatalyst
             this.formatToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fontToolStripMenuItem,
             this.sizeToolStripMenuItem});
-            this.formatToolStripMenuItem.ForeColor = System.Drawing.SystemColors.MenuText;
             this.formatToolStripMenuItem.Name = "formatToolStripMenuItem";
             this.formatToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
             this.formatToolStripMenuItem.Text = "Format";
@@ -209,9 +198,9 @@ namespace theCatalyst
             // 
             this.fontToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fontBox});
-            this.fontToolStripMenuItem.Image = global::theCatalyst.Properties.Resources.font;
+            this.fontToolStripMenuItem.Image = global::Notepad.Properties.Resources.font;
             this.fontToolStripMenuItem.Name = "fontToolStripMenuItem";
-            this.fontToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.fontToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.fontToolStripMenuItem.Text = "Font";
             this.fontToolStripMenuItem.Click += new System.EventHandler(this.fontToolStripMenuItem_Click);
             // 
@@ -232,9 +221,9 @@ namespace theCatalyst
             // 
             this.sizeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.sizeBox});
-            this.sizeToolStripMenuItem.Image = global::theCatalyst.Properties.Resources.size;
+            this.sizeToolStripMenuItem.Image = global::Notepad.Properties.Resources.size;
             this.sizeToolStripMenuItem.Name = "sizeToolStripMenuItem";
-            this.sizeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sizeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.sizeToolStripMenuItem.Text = "Size";
             // 
             // sizeBox
@@ -266,14 +255,13 @@ namespace theCatalyst
             this.toolStripSeparator5,
             this.undoToolStripMenuItem,
             this.redoToolStripMenuItem});
-            this.editToolStripMenuItem.ForeColor = System.Drawing.SystemColors.MenuText;
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
             this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
             this.editToolStripMenuItem.Text = "Edit";
             // 
             // cutToolStripMenuItem
             // 
-            this.cutToolStripMenuItem.Image = global::theCatalyst.Properties.Resources.cut;
+            this.cutToolStripMenuItem.Image = global::Notepad.Properties.Resources.cut;
             this.cutToolStripMenuItem.Name = "cutToolStripMenuItem";
             this.cutToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
             this.cutToolStripMenuItem.Text = "Cut";
@@ -281,7 +269,7 @@ namespace theCatalyst
             // 
             // copyToolStripMenuItem
             // 
-            this.copyToolStripMenuItem.Image = global::theCatalyst.Properties.Resources.copy;
+            this.copyToolStripMenuItem.Image = global::Notepad.Properties.Resources.copy;
             this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
             this.copyToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
             this.copyToolStripMenuItem.Text = "Copy";
@@ -289,7 +277,7 @@ namespace theCatalyst
             // 
             // pasteToolStripMenuItem
             // 
-            this.pasteToolStripMenuItem.Image = global::theCatalyst.Properties.Resources.paste;
+            this.pasteToolStripMenuItem.Image = global::Notepad.Properties.Resources.paste;
             this.pasteToolStripMenuItem.Name = "pasteToolStripMenuItem";
             this.pasteToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
             this.pasteToolStripMenuItem.Text = "Paste";
@@ -302,7 +290,7 @@ namespace theCatalyst
             // 
             // findToolStripMenuItem
             // 
-            this.findToolStripMenuItem.Image = global::theCatalyst.Properties.Resources.find;
+            this.findToolStripMenuItem.Image = global::Notepad.Properties.Resources.find;
             this.findToolStripMenuItem.Name = "findToolStripMenuItem";
             this.findToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F)));
             this.findToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
@@ -311,7 +299,7 @@ namespace theCatalyst
             // 
             // finToolStripMenuItem
             // 
-            this.finToolStripMenuItem.Image = global::theCatalyst.Properties.Resources.replace;
+            this.finToolStripMenuItem.Image = global::Notepad.Properties.Resources.replace;
             this.finToolStripMenuItem.Name = "finToolStripMenuItem";
             this.finToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
             this.finToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
@@ -325,7 +313,7 @@ namespace theCatalyst
             // 
             // undoToolStripMenuItem
             // 
-            this.undoToolStripMenuItem.Image = global::theCatalyst.Properties.Resources.undo;
+            this.undoToolStripMenuItem.Image = global::Notepad.Properties.Resources.undo;
             this.undoToolStripMenuItem.Name = "undoToolStripMenuItem";
             this.undoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Z)));
             this.undoToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
@@ -334,7 +322,7 @@ namespace theCatalyst
             // 
             // redoToolStripMenuItem
             // 
-            this.redoToolStripMenuItem.Image = global::theCatalyst.Properties.Resources.redo;
+            this.redoToolStripMenuItem.Image = global::Notepad.Properties.Resources.redo;
             this.redoToolStripMenuItem.Name = "redoToolStripMenuItem";
             this.redoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Y)));
             this.redoToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
@@ -346,32 +334,30 @@ namespace theCatalyst
             this.aboutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.helpToolStripMenuItem,
             this.releaseNotesToolStripMenuItem});
-            this.aboutToolStripMenuItem.ForeColor = System.Drawing.SystemColors.MenuText;
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.aboutToolStripMenuItem.Text = "About";
             // 
             // helpToolStripMenuItem
             // 
-            this.helpToolStripMenuItem.Image = global::theCatalyst.Properties.Resources.about;
+            this.helpToolStripMenuItem.Image = global::Notepad.Properties.Resources.about;
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1;
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.helpToolStripMenuItem.Text = "Help";
             this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
             // 
             // releaseNotesToolStripMenuItem
             // 
             this.releaseNotesToolStripMenuItem.Name = "releaseNotesToolStripMenuItem";
-            this.releaseNotesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.releaseNotesToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.releaseNotesToolStripMenuItem.Text = "Release Notes";
             this.releaseNotesToolStripMenuItem.Click += new System.EventHandler(this.releaseNotesToolStripMenuItem_Click);
             // 
             // newBtn
             // 
             this.newBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.newBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.newBtn.Image = global::theCatalyst.Properties.Resources._new;
+            this.newBtn.Image = global::Notepad.Properties.Resources._new;
             this.newBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.newBtn.Name = "newBtn";
             this.newBtn.Size = new System.Drawing.Size(23, 22);
@@ -381,8 +367,7 @@ namespace theCatalyst
             // openBtn
             // 
             this.openBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.openBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.openBtn.Image = global::theCatalyst.Properties.Resources.open;
+            this.openBtn.Image = global::Notepad.Properties.Resources.open;
             this.openBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.openBtn.Name = "openBtn";
             this.openBtn.Size = new System.Drawing.Size(23, 22);
@@ -393,8 +378,7 @@ namespace theCatalyst
             // 
             this.saveBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.saveBtn.Enabled = false;
-            this.saveBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.saveBtn.Image = global::theCatalyst.Properties.Resources.save;
+            this.saveBtn.Image = global::Notepad.Properties.Resources.save;
             this.saveBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.saveBtn.Name = "saveBtn";
             this.saveBtn.Size = new System.Drawing.Size(23, 22);
@@ -405,8 +389,7 @@ namespace theCatalyst
             // 
             this.printBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.printBtn.Enabled = false;
-            this.printBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.printBtn.Image = global::theCatalyst.Properties.Resources.print;
+            this.printBtn.Image = global::Notepad.Properties.Resources.print;
             this.printBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.printBtn.Name = "printBtn";
             this.printBtn.Size = new System.Drawing.Size(23, 22);
@@ -414,16 +397,13 @@ namespace theCatalyst
             // 
             // toolStripSeparator6
             // 
-            this.toolStripSeparator6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.toolStripSeparator6.Margin = new System.Windows.Forms.Padding(0, 0, 2, 0);
             this.toolStripSeparator6.Name = "toolStripSeparator6";
             this.toolStripSeparator6.Size = new System.Drawing.Size(6, 25);
             // 
             // cutBtn
             // 
             this.cutBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.cutBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.cutBtn.Image = global::theCatalyst.Properties.Resources.cut;
+            this.cutBtn.Image = global::Notepad.Properties.Resources.cut;
             this.cutBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.cutBtn.Name = "cutBtn";
             this.cutBtn.Size = new System.Drawing.Size(23, 22);
@@ -433,8 +413,7 @@ namespace theCatalyst
             // copyBtn
             // 
             this.copyBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.copyBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.copyBtn.Image = global::theCatalyst.Properties.Resources.copy;
+            this.copyBtn.Image = global::Notepad.Properties.Resources.copy;
             this.copyBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.copyBtn.Name = "copyBtn";
             this.copyBtn.Size = new System.Drawing.Size(23, 22);
@@ -444,8 +423,7 @@ namespace theCatalyst
             // pastebtn
             // 
             this.pastebtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.pastebtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.pastebtn.Image = global::theCatalyst.Properties.Resources.paste;
+            this.pastebtn.Image = global::Notepad.Properties.Resources.paste;
             this.pastebtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.pastebtn.Name = "pastebtn";
             this.pastebtn.Size = new System.Drawing.Size(23, 22);
@@ -454,8 +432,6 @@ namespace theCatalyst
             // 
             // toolStripSeparator7
             // 
-            this.toolStripSeparator7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.toolStripSeparator7.Margin = new System.Windows.Forms.Padding(0, 0, 2, 0);
             this.toolStripSeparator7.Name = "toolStripSeparator7";
             this.toolStripSeparator7.Size = new System.Drawing.Size(6, 25);
             // 
@@ -463,8 +439,7 @@ namespace theCatalyst
             // 
             this.undoBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.undoBtn.Enabled = false;
-            this.undoBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.undoBtn.Image = global::theCatalyst.Properties.Resources.undo;
+            this.undoBtn.Image = global::Notepad.Properties.Resources.undo;
             this.undoBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.undoBtn.Name = "undoBtn";
             this.undoBtn.Size = new System.Drawing.Size(23, 22);
@@ -475,8 +450,7 @@ namespace theCatalyst
             // 
             this.redoBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.redoBtn.Enabled = false;
-            this.redoBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.redoBtn.Image = global::theCatalyst.Properties.Resources.redo;
+            this.redoBtn.Image = global::Notepad.Properties.Resources.redo;
             this.redoBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.redoBtn.Name = "redoBtn";
             this.redoBtn.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -486,16 +460,13 @@ namespace theCatalyst
             // 
             // toolStripSeparator8
             // 
-            this.toolStripSeparator8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.toolStripSeparator8.Margin = new System.Windows.Forms.Padding(0, 0, 2, 0);
             this.toolStripSeparator8.Name = "toolStripSeparator8";
             this.toolStripSeparator8.Size = new System.Drawing.Size(6, 25);
             // 
             // findBtn
             // 
             this.findBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.findBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.findBtn.Image = global::theCatalyst.Properties.Resources.find;
+            this.findBtn.Image = global::Notepad.Properties.Resources.find;
             this.findBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.findBtn.Name = "findBtn";
             this.findBtn.Size = new System.Drawing.Size(23, 22);
@@ -505,8 +476,7 @@ namespace theCatalyst
             // replace
             // 
             this.replace.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.replace.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.replace.Image = global::theCatalyst.Properties.Resources.replace;
+            this.replace.Image = global::Notepad.Properties.Resources.replace;
             this.replace.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.replace.Name = "replace";
             this.replace.Size = new System.Drawing.Size(23, 22);
@@ -515,9 +485,6 @@ namespace theCatalyst
             // 
             // toolStrip1
             // 
-            this.toolStrip1.AutoSize = false;
-            this.toolStrip1.BackColor = System.Drawing.SystemColors.Control;
-            this.toolStrip1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newBtn,
             this.openBtn,
@@ -535,106 +502,86 @@ namespace theCatalyst
             this.replace});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Padding = new System.Windows.Forms.Padding(5, 0, 1, 0);
-            this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.toolStrip1.Size = new System.Drawing.Size(624, 25);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
+            // lineNumber
+            // 
+            this.lineNumber.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.lineNumber.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.lineNumber.Enabled = false;
+            this.lineNumber.Location = new System.Drawing.Point(0, 52);
+            this.lineNumber.Multiline = true;
+            this.lineNumber.Name = "lineNumber";
+            this.lineNumber.Size = new System.Drawing.Size(25, 373);
+            this.lineNumber.TabIndex = 3;
+            // 
             // statusStrip1
             // 
-            this.statusStrip1.AutoSize = false;
-            this.statusStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(63)))), ((int)(((byte)(65)))));
-            this.statusStrip1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
             this.linesLabel,
             this.toolStripStatusLabel2,
             this.lengthLabel});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 406);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 420);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Padding = new System.Windows.Forms.Padding(0, 5, 0, 3);
-            this.statusStrip1.Size = new System.Drawing.Size(624, 36);
-            this.statusStrip1.SizingGrip = false;
+            this.statusStrip1.Size = new System.Drawing.Size(624, 22);
             this.statusStrip1.TabIndex = 3;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(37, 23);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(37, 17);
             this.toolStripStatusLabel1.Text = "Lines:";
             // 
             // linesLabel
             // 
             this.linesLabel.Name = "linesLabel";
-            this.linesLabel.Size = new System.Drawing.Size(13, 23);
+            this.linesLabel.Size = new System.Drawing.Size(13, 17);
             this.linesLabel.Text = "0";
             // 
             // toolStripStatusLabel2
             // 
             this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(47, 23);
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(47, 17);
             this.toolStripStatusLabel2.Text = "Length:";
             // 
             // lengthLabel
             // 
             this.lengthLabel.Name = "lengthLabel";
-            this.lengthLabel.Size = new System.Drawing.Size(13, 23);
+            this.lengthLabel.Size = new System.Drawing.Size(13, 17);
             this.lengthLabel.Text = "0";
             // 
             // textBox1
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(73)))), ((int)(((byte)(74)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.HideSelection = false;
-            this.textBox1.Location = new System.Drawing.Point(0, 49);
+            this.textBox1.Location = new System.Drawing.Point(27, 52);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBox1.Size = new System.Drawing.Size(624, 357);
+            this.textBox1.Size = new System.Drawing.Size(597, 365);
             this.textBox1.TabIndex = 2;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // skinningManager1
-            // 
-            this.skinningManager1.DefaultSkin = NeoGeniX.Skinning.DefaultSkin.NeoGeniX;
-            this.skinningManager1.MaxBtn = false;
-            this.skinningManager1.MinBtn = false;
-            this.skinningManager1.ParentForm = null;
-            // 
-            // extrasToolStripMenuItem
-            // 
-            this.extrasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.launchLegacyVersionToolStripMenuItem});
-            this.extrasToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
-            this.extrasToolStripMenuItem.Name = "extrasToolStripMenuItem";
-            this.extrasToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
-            this.extrasToolStripMenuItem.Text = "Extras";
-            // 
-            // launchLegacyVersionToolStripMenuItem
-            // 
-            this.launchLegacyVersionToolStripMenuItem.Name = "launchLegacyVersionToolStripMenuItem";
-            this.launchLegacyVersionToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
-            this.launchLegacyVersionToolStripMenuItem.Text = "Launch Legacy Version";
-            this.launchLegacyVersionToolStripMenuItem.Click += new System.EventHandler(this.launchLegacyVersionToolStripMenuItem_Click);
-            // 
-            // theEditor
+            // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(624, 442);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.lineNumber);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "theEditor";
-            this.Text = "theEditor";
-            this.Load += new System.EventHandler(this.theEditor_Load);
+            this.Name = "Form1";
+            this.Text = "Notepad";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
@@ -647,6 +594,8 @@ namespace theCatalyst
         }
 
         #endregion
+
+        private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
@@ -689,17 +638,14 @@ namespace theCatalyst
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
         private System.Windows.Forms.ToolStripButton findBtn;
         private System.Windows.Forms.ToolStripButton replace;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.TextBox lineNumber;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripStatusLabel linesLabel;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
         private System.Windows.Forms.ToolStripStatusLabel lengthLabel;
-        private NeoGeniX.Skinning.SkinningManager skinningManager1;
-        private DarkStatusStrip statusStrip1;
-        private DarkTextBox textBox1;
-        private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem extrasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem launchLegacyVersionToolStripMenuItem;
     }
 }
 

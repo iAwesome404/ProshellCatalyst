@@ -9,17 +9,16 @@ using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using NeoGeniX.Forms;
 
-namespace theCatalyst
+namespace Notepad
 {
-    public partial class theEditor : DarkForm
+    public partial class Form1 : Form
     {
         String currentFile;
         ArrayList undoList;
         ArrayList redoList;
         int textSizeValue;
-        public theEditor()
+        public Form1()
         {
             InitializeComponent();
             currentFile = null;
@@ -59,7 +58,7 @@ namespace theCatalyst
                 saveToolStripMenuItem.Enabled = true;
                 printBtn.Enabled = true;
                 printToolStripMenuItem.Enabled = true;
-                this.Text = currentFile + " theEditor"; 
+                this.Text = currentFile + " Notepad"; 
                 sr.Close();
             }
         }
@@ -86,7 +85,7 @@ namespace theCatalyst
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 currentFile = saveFileDialog1.FileName;
-                this.Text = currentFile + " theCatalyst";
+                this.Text = currentFile + " Notepad";
                 saveFile();
             }
             saveBtn.Enabled = true;
@@ -163,6 +162,9 @@ namespace theCatalyst
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             int numOfLines = textBox1.Lines.Length;
+            lineNumber.Text = "";
+            for (int i = 0; i != numOfLines; ++i)
+                lineNumber.AppendText((i + 1) + "\n");
             linesLabel.Text = numOfLines.ToString();
             lengthLabel.Text = textBox1.Text.Length.ToString();
             undoBtn.Enabled = true;
@@ -343,39 +345,42 @@ namespace theCatalyst
         {
             textSizeValue = int.Parse(sizeBox.SelectedItem.ToString());
             textBox1.Font = new Font(fontBox.SelectedItem.ToString(), textSizeValue);
+            lineNumber.Font = new Font(fontBox.SelectedItem.ToString(), textSizeValue);
         }
 
         private void helpToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AboutBox1 aboutBox1 = new AboutBox1();
-            aboutBox1.Show();
+            MessageBox.Show("Shortcuts for notepad \n  ctrl+n - new file\n  ctrl+o - open file\n  ctrl+p - print file\n  ctrl+e - exit\n  ctrl+f - find\n  ctrl+r - replace\n  f1 - help\n", "Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void releaseNotesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            textBox1.Text = "";
+            textBox1.Text = "1. Graphic user interface in WinForms\r\n" +
+                             "       a. Fereastra principala\r\n" +
+                             "       b. Meniu File cu submeniu: Open, Save, Save As, Close\r\n" +
+                             "       c. Meniu Edit cu submeniu: Find, Find & Replace, Undo, Redo\r\n" +
+                             "       d. Tool bar care dubleaza functionalitatile din punctul \r\n" +
+                             "       e. La modificarea dimensiunilor ferestrei controalele din toolbar raman ancorate la partea stanga\r\n" +
+                             "          in timp ce textboxul isi modifica dimensiunea impreuna cu fereastra.\r\n" +
+                            "2. Find, Find & Replace\n"+
+                             "       a. Se folosesc doua ferestre suplimentare similar cu programul notepad.exe din windows.\r\n" +
+                            "3. Daca fisierul a fost modificat se cere o confirmare inainte de inchidere.\r\n" +
+                            "4. Functia Undo Redo se implementeaza manual. Numarul de undo’uri – nelimitat.\r\n" +
+                            "5. Sa fie respectat tab orderul controalelor.\r\n" +
+
+                            "Добавлено\r\n" +
+                                "       1. Возможность выбора шрифта из 4 шрифтов для отображения текста\r\n" +
+                                "       2. Изменения размера шрифта.\r\n" +
+                                "       3. В меню файл добавлен пункт \"Печать\". (но не знаю, будет ли реально что-то печататься)\r\n" +
+                                "       4. Добавленна нумерация строк.\r\n" +
+                                "       5. В строке состояния отображается число строк текущего документа и число символов.\r\n" +
+	                            "       6. Меню \"About\" где можно открыть Help - набор горячих клавиш,  Release Notes - открытие данного документа.r\n";
            
         }
 
         private void fontToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void theEditor_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void launchLegacyVersionToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            theEditorLegacy tel = new theEditorLegacy();
-            tel.Show();
         }
     }
 }

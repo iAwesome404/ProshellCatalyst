@@ -28,23 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Run));
             this.skinningManager1 = new NeoGeniX.Skinning.SkinningManager();
             this.darkLabel1 = new NeoGeniX.Controls.DarkLabel();
             this.darkButton1 = new NeoGeniX.Controls.DarkButton();
             this.darkButton2 = new NeoGeniX.Controls.DarkButton();
             this.darkButton3 = new NeoGeniX.Controls.DarkButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.darkTextBox1 = new NeoGeniX.Controls.DarkTextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // skinningManager1
             // 
             this.skinningManager1.DefaultSkin = NeoGeniX.Skinning.DefaultSkin.NeoGeniX;
-            this.skinningManager1.MaxBtn = true;
-            this.skinningManager1.MinBtn = true;
-            this.skinningManager1.ParentForm = null;
+            this.skinningManager1.MaxBtn = false;
+            this.skinningManager1.MinBtn = false;
+            this.skinningManager1.ParentForm = this;
             // 
             // darkLabel1
             // 
@@ -90,17 +91,6 @@
             this.darkButton3.Text = "Browse...";
             this.darkButton3.Click += new System.EventHandler(this.darkButton3_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Image = global::theCatalyst.Properties.Resources.Proshell;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(72, 93);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            // 
             // darkTextBox1
             // 
             this.darkTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(73)))), ((int)(((byte)(74)))));
@@ -115,6 +105,17 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Image = global::theCatalyst.Properties.Resources.Proshell;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(72, 93);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
             // Run
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -127,6 +128,7 @@
             this.Controls.Add(this.darkButton1);
             this.Controls.Add(this.darkLabel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Run";

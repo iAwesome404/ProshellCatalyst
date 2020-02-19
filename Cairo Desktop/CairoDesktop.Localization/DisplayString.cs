@@ -2024,5 +2024,11 @@ namespace CairoDesktop.Localization
                 return "theCalculator";
             }
         }
+        public static string sSettings_General_UseWindowsShell
+        { get
+            {
+                return "Use Windows Shell";
+            } 
+        }
     }
 }

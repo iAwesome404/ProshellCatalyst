@@ -36,7 +36,7 @@ namespace theCatalyst
         }
         public static void openEditor(Form mf)
         {
-            theEditor editor = new theEditor();
+            theEditorLegacy editor = new theEditorLegacy();
             editor.skinningManager1.ParentForm = null;
             editor.MdiParent = mf;
             editor.Show();

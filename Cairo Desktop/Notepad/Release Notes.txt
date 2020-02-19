@@ -1,0 +1,19 @@
+1. Graphic user interface in WinForms
+	a. Fereastra principala
+	b. Meniu File cu submeniu: Open, Save, Save As, Close
+	c. Meniu Edit cu submeniu: Find, Find & Replace, Undo, Redo
+	d. Tool bar care dubleaza functionalitatile din punctul 
+	e. La modificarea dimensiunilor ferestrei controalele din toolbar raman ancorate la partea stanga in timp ce 	textboxul isi modifica dimensiunea impreuna cu fereastra.
+2. Find, Find & Replace
+	a. Se folosesc doua ferestre suplimentare similar cu programul notepad.exe din windows.
+3. Daca fisierul a fost modificat se cere o confirmare inainte de inchidere.
+4. Functia Undo Redo se implementeaza manual. Numarul de undo’uri – nelimitat.
+5. Sa fie respectat tab orderul controalelor.
+
+Добавлено
+	1. Возможность выбора шрифта из 4 шрифтов для отображения текста
+	2. Изменения размера шрифта.
+	3. В меню файл добавлен пункт "Печать". (но не знаю, будет ли реально что-то печататься)
+	4. Добавленна нумерация строк.
+	5. В строке состояния отображается число строк текущего документа и число символов.
+	6. Меню "About" где можно открыть Help - набор горячих клавиш,  Release Notes - открытие данного документа.
