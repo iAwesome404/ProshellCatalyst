@@ -61,6 +61,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Office", "Office", "{F7A59D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordCatalystConnector", "WordCatalystConnector\WordCatalystConnector.csproj", "{007C0A8F-A7A0-4283-BBBF-B5781AF56B66}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ProshellNetwork", "ProshellNetwork", "{C19EA66C-5FB5-41F5-BFCF-B8861D1069E5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

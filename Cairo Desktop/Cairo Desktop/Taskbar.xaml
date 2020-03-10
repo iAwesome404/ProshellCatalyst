@@ -221,6 +221,16 @@
                                             </MenuItem.Icon>
                                         </MenuItem>
                                     </Border>
+                                    <Border Margin="99,-3,0,-3" Padding="0,3" Width="351" BorderThickness="1,0,0,0" BorderBrush="{DynamicResource ResourceKey=MenuBorderBrush}" Visibility="Collapsed" Name="bdrTaskMan">
+                                        <MenuItem Header="Open Task Manager" Click="MenuItem_Click">
+                                            <MenuItem.Icon>
+                                                <Image Source="Resources\taskViewIcon.png"
+                                        Width="16"
+                                        Height="16"
+                                        Margin="0,-1,0,0" />
+                                            </MenuItem.Icon>
+                                        </MenuItem>
+                                    </Border>
                                 </StackPanel>
                             </Border>
                         </Popup>

@@ -33,9 +33,5 @@ namespace theCatalyst_Test_Program
             theCatalyst.Init.openTime();
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            Catalyst_Containers.Init.Start();
-        }
     }
 }
